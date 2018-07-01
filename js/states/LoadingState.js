@@ -40,5 +40,9 @@ Platformer.LoadingState.prototype.preload = function () {
 
 Platformer.LoadingState.prototype.create = function () {
     "use strict";
-    this.game.state.start("Menu", true, false, this.level_data);
+    if(this.level_data.assets.level_tilemap.source == "assets/maps/level1_map.json"){
+        this.game.state.start("Menu", true, false, this.level_data);
+    }else{
+        this.game.state.start("GameState", true, false, this.level_data);
+    }
 };

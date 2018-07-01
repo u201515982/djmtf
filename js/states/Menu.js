@@ -11,8 +11,8 @@ Menu.prototype = {
 		background = this.game.add.sprite(0,0,'background');
 
 		button = this.game.add.button(0,0,'button-start',this.goGame,this,1,0,2);
-		button.x = this.game.world.centerX;
-		button.y = this.game.world.centerY;
+		button.x = 700;
+		button.y = 300;
 		button.anchor.setTo(0.5);
 
 		button.inputEnabled = true;
